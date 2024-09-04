@@ -13,7 +13,7 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form id="subscribe-form">
-                        <input type="email" name="email" id="email" class="subscription-input-form" placeholder="Enter your email here" required>
+                        <input type="text" name="email" id="email" class="subscription-input-form" placeholder="Enter your email here">
                         <button type="submit" class="appsLand-btn subscribe-btn">
                             Email göndər
                         </button>
@@ -35,7 +35,7 @@
             var email = $('#email').val();
 
             $.ajax({
-                url: 'subscribe.php',
+                url: '<?= view('pages.subscribe') ?>',
                 type: 'POST',
                 data: { email: email },
                 success: function(response) {
